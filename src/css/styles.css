@@ -87,11 +87,7 @@ h3{
    ========================================================================== */
 
 .contenedor{
-    max-width: 120rem; /* 1200 pixeles porque 1 rem= 10px */
-    /* margin-top: 0; */
-    /* margin-bottom: 0; */
-    /* margin-right: auto; */
-    /* margin-left: auto; */
+    max-width: 120rem; /* 1200 pixeles porque 1 rem = 10px */
     margin: 0 auto;
 }
 
@@ -103,34 +99,33 @@ h3{
 .navegacion-principal{
     background-color: var(--secundario);
 
-    /*Margin es por fuera y padding es por dentro*/
-    /*Padding significa relleno o la parte interna de un contenedor*/
-    /*Margin significa el espacio externo de un contenedor*/
-    /*Box-Model significa basicamente es como se acomoda varios elemtnos html*/
-    /*Border significa el borde o la linea que rodea al contenido y al padding*/
+    /* Margin es por fuera y padding es por dentro */
+    /* Padding significa relleno o la parte interna de un contenedor */
+    /* Margin significa el espacio externo de un contenedor */
+    /* Box-Model significa basicamente como se acomodan varios elementos HTML */
+    /* Border significa el borde o la linea que rodea al contenido y al padding */
 
-    /*Flexbox sirve para aliniar elementos*/
+    /* Flexbox sirve para alinear elementos */
     display: flex;
 
-    /*Acomoda los elementos de manera vertical*/
+    /* Acomoda los elementos de manera vertical */
     flex-direction: column;
 
-    /*Jusitifica el cntenido dependiendo de lo que siga despues del justifica contenido*/
-    /* justify-content para FILAS / align-items es para COLUMNAS (flex-direction) */
+    /* justify-content para FILAS / align-items es para COLUMNAS */
     justify-content: space-between;
 
-    /*Font-weight es el grosor de las letras y en este caso es en negritas*/
+    /* Font-weight es el grosor de las letras */
     font-weight: bold;
 
-    /*El tamaño de la letra*/
+    /* El tamaño de la letra */
     font-size: 2rem;
 
-    /*Alinea los elementos al centro*/
+    /* Alinea los elementos al centro */
     align-items: center;
 }
 
 
-/* Al poner el cursor en el hipervínculo*/
+/* Al poner el cursor en el hipervínculo */
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
@@ -140,7 +135,7 @@ h3{
 .navegacion-principal a{
     color: var(--blanco);
 
-    /*con text-decoration:none remueve el subrayao*/
+    /* Con text-decoration:none remueve el subrayado */
     text-decoration: none;
 
     padding: 1rem;
@@ -156,31 +151,29 @@ h3{
    Hero
    ========================================================================== */
 
-/*Hero es la imagen principal de la pagina*/
+/* Hero es la imagen principal de la pagina */
 .hero{
-    background-image: url("../img/hero.jpg"); /* ../ es para regresar un nivel
-    de directorio ya que la carpeta "img" está afuera de "CSS" */
+    background-image: url("../img/hero.jpg");
 
-    /*Evita que la imagen se repita*/
+    /* Evita que la imagen se repita */
     background-repeat: no-repeat;
 
-    /*Hace que la imagen cubra todo el espacio disponible*/
+    /* Hace que la imagen cubra todo el espacio disponible */
     background-size: cover;
 
-    /*Centra la imagen*/
+    /* Centra la imagen */
     background-position: center;
 
-    /*Altura del hero*/
+    /* Altura del hero */
     height: 450px;
 
-    position: relative; /* El padre siempre debe ser relative */
+    position: relative;
 }
 
 
-/*Contenido que esta dentro del hero*/
+/* Contenido que esta dentro del hero */
 .contenido-hero{
-    position: absolute; /*Para manipular la posición. El hijo siempre
-    debe ser absolute*/
+    position: absolute;
 
     background-color: rgba(70, 70, 70, 0.457);
 
@@ -188,7 +181,7 @@ h3{
 
     height: 100%;
 
-    /*Alinear vertical y horizontalmente*/
+    /* Alinear vertical y horizontalmente */
     display: flex;
 
     flex-direction: column;
@@ -201,14 +194,14 @@ h3{
 }
 
 
-/*Titulo que esta dentro del hero*/
+/* Titulo que esta dentro del hero */
 .contenido-hero h2,
 .contenido-hero p{
     color: var(--blanco);
 }
 
 
-/*Ubicacion dentro del hero*/
+/* Ubicacion dentro del hero */
 .ubicacion{
     display: flex;
 
@@ -222,7 +215,7 @@ h3{
 }
 
 
-/*Quitamos el margen que trae por defecto el parrafo*/
+/* Quitamos el margen que trae por defecto el parrafo */
 .ubicacion p{
     margin: 0;
 }
@@ -237,7 +230,7 @@ h3{
 
     color: var(--blanco);
 
-    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    text-transform: uppercase;
 
     text-decoration: none;
 
@@ -253,48 +246,56 @@ h3{
 
     text-align: center;
 
-    border: none; /* Remueve el borde del botón en formulario */
+    border: none;
 }
 
 
 .boton:hover{
-    cursor: pointer; /* Cambia el cursor a una manita */
+    cursor: pointer;
 }
 
 
 /* ==========================================================================
-    Mis Servicios
+   Mis Servicios
    ========================================================================== */
 
 .servicio{
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
-    /* centrar el contenido de cada servicio */
 }
 
 
 .servicio h3{
     color: var(--secundario);
+
     font-weight: normal;
 }
 
 
 .servicio p{
-    /*Interlineado de texto*/
     line-height: 1.5;
+
     text-align: center;
 }
 
 
 .servicio .iconos{
-    height: 15rem; /* Altura de los iconos */
-    width: 15rem; /* Ancho de los iconos */
+    height: 15rem;
+
+    width: 15rem;
+
     background-color: var(--primario);
-    border-radius: 50%; /* Hace que el contenedor sea circular */
+
+    border-radius: 50%;
+
     display: flex;
-    justify-content: space-evenly; /* Distribuye los iconos de manera uniforme */
-    align-items: center; /* Centra los iconos verticalmente */
+
+    justify-content: space-evenly;
+
+    align-items: center;
 }
 
 
@@ -305,13 +306,9 @@ h3{
 .formulario{
     background-color: var(--gris);
 
-    /*ahora MQ*/
-    /*¿que es mas pequeño? ¿el 60 rem o el 100% del ancho?*/
-    /* si tengo un smartphone de 488px, toma 100% */
-
     width: 100%;
 
-    margin: 0 auto; /* Centra el formulario horizontalmente */
+    margin: 0 auto;
 
     padding: 2rem;
 
@@ -320,43 +317,53 @@ h3{
 
 
 .formulario fieldset{
-    border: none; /* Remueve el borde del fieldset */
+    border: none;
+
     display: flex;
+
     flex-direction: column;
-    gap: 1rem; /* Espacio entre los elementos del formulario */
+
+    gap: 1rem;
 }
 
 
 .formulario legend{
     text-align: center;
+
     font-size: 1.8rem;
+
     font-weight: bold;
+
     margin-bottom: 2rem;
-    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+
+    text-transform: uppercase;
+
     color: var(--primario);
 }
 
 
 .campo{
-    margin-bottom: 1rem; /* Espacio entre los campos del formulario */
+    margin-bottom: 1rem;
 }
 
 
 .campo label{
-    display: block; /* Hace que el label ocupe toda la línea */
+    display: block;
+
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+
+    margin-bottom: 0.5rem;
+
     color: var(--blanco);
 }
 
 
 .campo textarea{
-    height: 20rem; /* Altura del textarea */
+    height: 20rem;
 }
 
 
-/*Cuando la pantalla sea mayor a 780px*/
-/*La navegacion cambia de vertical a horizontal*/
+/* Cuando la pantalla sea mayor a 768px */
 @media (min-width: 768px){
 
     .navegacion-principal{
@@ -370,10 +377,9 @@ h3{
 
 
     .servicios{
-        display: grid; /* Grid es un sistema de diseño bidimensional que permite organizar elementos en filas y columnas */
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-        /* grid-template-columns:  1fr 1fr 1fr;*/
-        /* grid-template-columns:  33.33% 33.33% 33.33%;*/
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
