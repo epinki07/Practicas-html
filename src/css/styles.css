@@ -20,12 +20,14 @@ body{
     text-align: center;
     font-size: 3.8rem;
 }
-.my-title  span{
+
+.my-title span{
     font-size: 2rem;
 }
 
-.navegador-principal{
+.navegacion-principal{
     background-color: var(--secundario);
+
     /*Margin es por fuera y padding es por dentro*/
     /*Padding significa relleno o la parte interna de un contenedor*/
     /*Margin significa el espacio externo de un contenedor*/
@@ -45,15 +47,17 @@ body{
     font-size: 2rem;
 }
 
-.navegador-principal a:hover{
+.navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
 }
 
-.navegador-principal a {
+.navegacion-principal a{
     color: var(--blanco);
+
     /*con text-decoration:none remueve el subrayao*/
     text-decoration: none;
+
     padding: 1rem;
 }
 
