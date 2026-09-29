@@ -1,14 +1,22 @@
 /**/
 
+/* ==========================================================================
+   Variables globales
+   ========================================================================== */
+
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
-    --secundario: #26939f;
+    --secundario: #1fe1f7c0;
     --gris: #757575;
     --grisClaro: #b6b6b6;
 }
 
+
+/* ==========================================================================
+   Base / Reset
+   ========================================================================== */
 
 /* Truco para uniformidad de texto entre navegadores */
 html{
@@ -20,11 +28,13 @@ body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
     color: var(--oscuro);
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    background-image: linear-gradient(to top, var(--blanco) 0%, var(--blanco) 100%);
 }
 
 
-/*Tipografía*/
+/* ==========================================================================
+   Tipografía
+   ========================================================================== */
 
 h1{
     font-size: 3.8rem;
@@ -72,6 +82,24 @@ h3{
 }
 
 
+/* ==========================================================================
+   Layout / Contenedores
+   ========================================================================== */
+
+.contenedor{
+    max-width: 120rem; /* 1200 pixeles porque 1 rem= 10px */
+    /* margin-top: 0; */
+    /* margin-bottom: 0; */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   Navegación principal
+   ========================================================================== */
+
 .navegacion-principal{
     background-color: var(--secundario);
 
@@ -88,6 +116,7 @@ h3{
     flex-direction: column;
 
     /*Jusitifica el cntenido dependiendo de lo que siga despues del justifica contenido*/
+    /* justify-content para FILAS / align-items es para COLUMNAS (flex-direction) */
     justify-content: space-between;
 
     /*Font-weight es el grosor de las letras y en este caso es en negritas*/
@@ -118,20 +147,14 @@ h3{
 }
 
 
-.contenedor{
-    max-width: 120rem; /* 1200 pixeles porque 1 rem= 10px */
-    /* margin-top: 0; */
-    /* margin-bottom: 0; */
-    /* margin-right: auto; */
-    /* margin-left: auto; */
-    margin: 0 auto;
-}
-
-
 .nav-bg{
     background-color: var(--secundario);
 }
 
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
 
 /*Hero es la imagen principal de la pagina*/
 .hero{
@@ -150,7 +173,7 @@ h3{
     /*Altura del hero*/
     height: 450px;
 
-    position: relative;
+    position: relative; /* El padre siempre debe ser relative */
 }
 
 
@@ -159,7 +182,7 @@ h3{
     position: absolute; /*Para manipular la posición. El hijo siempre
     debe ser absolute*/
 
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(70, 70, 70, 0.457);
 
     width: 100%;
 
@@ -189,7 +212,7 @@ h3{
 .ubicacion{
     display: flex;
 
-    align-items: center;
+    align-items: flex-end;
 
     justify-content: center;
 
@@ -204,6 +227,10 @@ h3{
     margin: 0;
 }
 
+
+/* ==========================================================================
+   Botones
+   ========================================================================== */
 
 .boton{
     background-color: var(--secundario);
@@ -225,6 +252,106 @@ h3{
     width: 90%;
 
     text-align: center;
+
+    border: none; /* Remueve el borde del botón en formulario */
+}
+
+
+.boton:hover{
+    cursor: pointer; /* Cambia el cursor a una manita */
+}
+
+
+/* ==========================================================================
+    Mis Servicios
+   ========================================================================== */
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centrar el contenido de cada servicio */
+}
+
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+
+.servicio p{
+    /*Interlineado de texto*/
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.servicio .iconos{
+    height: 15rem; /* Altura de los iconos */
+    width: 15rem; /* Ancho de los iconos */
+    background-color: var(--primario);
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    display: flex;
+    justify-content: space-evenly; /* Distribuye los iconos de manera uniforme */
+    align-items: center; /* Centra los iconos verticalmente */
+}
+
+
+/* ==========================================================================
+   Contactos
+   ========================================================================== */
+
+.formulario{
+    background-color: var(--gris);
+
+    /*ahora MQ*/
+    /*¿que es mas pequeño? ¿el 60 rem o el 100% del ancho?*/
+    /* si tengo un smartphone de 488px, toma 100% */
+
+    width: 100%;
+
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+}
+
+
+.formulario fieldset{
+    border: none; /* Remueve el borde del fieldset */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre los elementos del formulario */
+}
+
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    color: var(--primario);
+}
+
+
+.campo{
+    margin-bottom: 1rem; /* Espacio entre los campos del formulario */
+}
+
+
+.campo label{
+    display: block; /* Hace que el label ocupe toda la línea */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+    color: var(--blanco);
+}
+
+
+.campo textarea{
+    height: 20rem; /* Altura del textarea */
 }
 
 
@@ -239,6 +366,14 @@ h3{
 
     .boton{
         width: auto;
+    }
+
+
+    .servicios{
+        display: grid; /* Grid es un sistema de diseño bidimensional que permite organizar elementos en filas y columnas */
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+        /* grid-template-columns:  1fr 1fr 1fr;*/
+        /* grid-template-columns:  33.33% 33.33% 33.33%;*/
     }
 
 }
