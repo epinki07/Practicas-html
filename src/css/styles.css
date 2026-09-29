@@ -1,14 +1,16 @@
 /**/
+
 :root{
-    --blanco: #fff;
+    --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
-    --secundario: #0097a7;
+    --secundario: #26939f;
     --gris: #757575;
+    --grisClaro: #b6b6b6;
 }
 
 
-/*Truco para uniformidad de texto en el navegador*/
+/* Truco para uniformidad de texto entre navegadores */
 html{
     font-size: 62.5%;
 }
@@ -18,6 +20,31 @@ body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
     color: var(--oscuro);
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+
+/*Tipografía*/
+
+h1{
+    font-size: 3.8rem;
+}
+
+
+h2{
+    font-size: 2.8rem;
+}
+
+
+h3{
+    font-size: 1.8rem;
+}
+
+
+h1,
+h2,
+h3{
+    text-align: center;
 }
 
 
@@ -29,6 +56,19 @@ body{
 
 .my-title span{
     font-size: 2rem;
+}
+
+
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    margin-top: 4rem;
+}
+
+
+.titulo span{
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -61,6 +101,7 @@ body{
 }
 
 
+/* Al poner el cursor en el hipervínculo*/
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
@@ -78,8 +119,11 @@ body{
 
 
 .contenedor{
-    /*margin{top,bottom,right y left} se pueden resumir en estas lineas*/
-    width: 120rem;
+    max-width: 120rem; /* 1200 pixeles porque 1 rem= 10px */
+    /* margin-top: 0; */
+    /* margin-bottom: 0; */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
     margin: 0 auto;
 }
 
@@ -91,7 +135,8 @@ body{
 
 /*Hero es la imagen principal de la pagina*/
 .hero{
-    background-image: url("../img/Salamanders.png");
+    background-image: url("../img/hero.jpg"); /* ../ es para regresar un nivel
+    de directorio ya que la carpeta "img" está afuera de "CSS" */
 
     /*Evita que la imagen se repita*/
     background-repeat: no-repeat;
@@ -106,26 +151,37 @@ body{
     height: 450px;
 
     position: relative;
-
-    /*Utilizamos flexbox para centrar el contenido*/
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
 }
 
 
 /*Contenido que esta dentro del hero*/
 .contenido-hero{
+    position: absolute; /*Para manipular la posición. El hijo siempre
+    debe ser absolute*/
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    width: 100%;
+
+    height: 100%;
+
+    /*Alinear vertical y horizontalmente*/
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
 }
 
 
 /*Titulo que esta dentro del hero*/
-.contenido-hero h2{
+.contenido-hero h2,
+.contenido-hero p{
     color: var(--blanco);
-    text-align: center;
 }
 
 
@@ -137,6 +193,8 @@ body{
 
     justify-content: center;
 
+    font-size: 1.8rem;
+
     color: var(--blanco);
 }
 
@@ -147,12 +205,40 @@ body{
 }
 
 
+.boton{
+    background-color: var(--secundario);
+
+    color: var(--blanco);
+
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 1rem 3rem;
+
+    margin-top: 3rem;
+
+    border-radius: 0.5rem;
+
+    width: 90%;
+
+    text-align: center;
+}
+
+
 /*Cuando la pantalla sea mayor a 780px*/
 /*La navegacion cambia de vertical a horizontal*/
-@media (min-width: 780px){
+@media (min-width: 768px){
 
     .navegacion-principal{
         flex-direction: row;
+    }
+
+
+    .boton{
+        width: auto;
     }
 
 }
