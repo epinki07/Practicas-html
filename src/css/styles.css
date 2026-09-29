@@ -7,23 +7,30 @@
     --gris: #757575;
 }
 
+
 /*Truco para uniformidad de texto en el navegador*/
 html{
-    front-size: 62.5%;
+    font-size: 62.5%;
 }
 
+
 body{
-    front-size: 16px;
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    color: var(--oscuro);
 }
+
 
 .my-title{
     text-align: center;
     font-size: 3.8rem;
 }
 
+
 .my-title span{
     font-size: 2rem;
 }
+
 
 .navegacion-principal{
     background-color: var(--secundario);
@@ -37,6 +44,9 @@ body{
     /*Flexbox sirve para aliniar elementos*/
     display: flex;
 
+    /*Acomoda los elementos de manera vertical*/
+    flex-direction: column;
+
     /*Jusitifica el cntenido dependiendo de lo que siga despues del justifica contenido*/
     justify-content: space-between;
 
@@ -45,12 +55,17 @@ body{
 
     /*El tamaño de la letra*/
     font-size: 2rem;
+
+    /*Alinea los elementos al centro*/
+    align-items: center;
 }
+
 
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
 }
+
 
 .navegacion-principal a{
     color: var(--blanco);
@@ -61,12 +76,83 @@ body{
     padding: 1rem;
 }
 
+
 .contenedor{
     /*margin{top,bottom,right y left} se pueden resumir en estas lineas*/
-    width: 120%;
+    width: 120rem;
     margin: 0 auto;
 }
 
+
 .nav-bg{
     background-color: var(--secundario);
+}
+
+
+/*Hero es la imagen principal de la pagina*/
+.hero{
+    background-image: url("../img/Salamanders.png");
+
+    /*Evita que la imagen se repita*/
+    background-repeat: no-repeat;
+
+    /*Hace que la imagen cubra todo el espacio disponible*/
+    background-size: cover;
+
+    /*Centra la imagen*/
+    background-position: center;
+
+    /*Altura del hero*/
+    height: 450px;
+
+    position: relative;
+
+    /*Utilizamos flexbox para centrar el contenido*/
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/*Contenido que esta dentro del hero*/
+.contenido-hero{
+    text-align: center;
+}
+
+
+/*Titulo que esta dentro del hero*/
+.contenido-hero h2{
+    color: var(--blanco);
+    text-align: center;
+}
+
+
+/*Ubicacion dentro del hero*/
+.ubicacion{
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--blanco);
+}
+
+
+/*Quitamos el margen que trae por defecto el parrafo*/
+.ubicacion p{
+    margin: 0;
+}
+
+
+/*Cuando la pantalla sea mayor a 780px*/
+/*La navegacion cambia de vertical a horizontal*/
+@media (min-width: 780px){
+
+    .navegacion-principal{
+        flex-direction: row;
+    }
+
 }
