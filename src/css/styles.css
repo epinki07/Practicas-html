@@ -5,12 +5,12 @@
    ========================================================================== */
 
 :root{
-    --blanco: #ffffff;
-    --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #1fe1f7c0;
-    --gris: #757575;
-    --grisClaro: #b6b6b6;
+    --blanco: #f8fafc;
+    --oscuro: #0f172a;
+    --primario: #f97316;
+    --secundario: #0f4c81;
+    --gris: #334155;
+    --grisClaro: #cbd5e1;
 }
 
 
@@ -28,7 +28,7 @@ body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
     color: var(--oscuro);
-    background-image: linear-gradient(to top, var(--blanco) 0%, var(--blanco) 100%);
+    background-image: linear-gradient(to top, #e0f2fe 0%, var(--blanco) 100%);
 }
 
 
@@ -78,7 +78,7 @@ h3{
 
 .titulo span{
     font-size: 2.5rem;
-    color: rgb(0, 0, 0);
+    color: var(--primario);
 }
 
 
@@ -175,7 +175,7 @@ h3{
 .contenido-hero{
     position: absolute;
 
-    background-color: rgba(70, 70, 70, 0.457);
+    background-color: rgba(15, 76, 129, 0.72);
 
     width: 100%;
 
@@ -288,6 +288,7 @@ h3{
     width: 15rem;
 
     background-color: var(--primario);
+    color: var(--oscuro);
 
     border-radius: 50%;
 
